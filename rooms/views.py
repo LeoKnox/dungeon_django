@@ -22,10 +22,10 @@ def rooms_list(request):
         if serializer.is_valid():
             serializer.save()
             return Response(status=status.HTTP_201_CREATED)
-        return Response(esrializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['PUT', 'DELETE'])
-def rooms_detail(request. pk):
+def rooms_detail(request, pk):
     try:
         room = Room.objects.get(pk=pk)
     except Room.DoesNotExist:

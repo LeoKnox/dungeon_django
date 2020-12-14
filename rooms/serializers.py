@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Room, Door
 
 class RoomSerializer(serializers.ModelSerializer):
-    rooms = serilializers.PrimaryKeyRelatedField(queryset.Room.objects.all(), many=True)
+    rooms = serializers.PrimaryKeyRelatedField(Room.objects.all(), many=True)
     class Meta:
         model = Room
         fields = ('pk', 'name', 'description', 'floor', 'width', 'length')
