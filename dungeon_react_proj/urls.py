@@ -21,5 +21,5 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^api/rooms/$', views.rooms_list),
-    re_path(r'^api/rooms/([0-9])$, views.rooms_detail'),
+    re_path(r'^api/rooms/([0-9])$', views.rooms_detail),
 ]
