@@ -9,7 +9,7 @@ class RoomSerializer(serializers.ModelSerializer):
         fields = ('pk', 'name', 'description', 'floor', 'width', 'length', 'doors')
 
 class DoorSerializer(serializers.ModelSerializer):
-    door_list = RoomSerializer(many = True, read_only = True)
+    rooms = RoomSerializer(many = True, read_only = True)
     class Meta:
         model = Door
-        fields = ('pk', 'room_a', 'room_b')
+        fields = ('pk', 'room_a', 'room_b', 'rooms')
