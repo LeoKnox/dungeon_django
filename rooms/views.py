@@ -14,8 +14,10 @@ def rooms_list(request):
         data = Room.objects.all()
 
         serializer = RoomSerializer(data, context={'request': request}, many = True)
+        #serializerT = RoomSerializer()
 
         return Response(serializer.data)
+        #return Response(serializerT.data)
 
     elif request.method == 'POST':
         serializer = RoomSerializer(data=request.data)
