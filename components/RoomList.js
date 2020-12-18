@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Table } from "reactstrap";
-import NewRoomModal from "./NewRoomModa";
+import NewRoomModal from "./NewRoomModal";
 
 import ConfirmRemovalModal from "./ConfirmRemovalModal";
 
