@@ -9,7 +9,7 @@ class NewRoomModal extends Component {
 
     toggle = () => {
         this.setState(previous => ({
-            modal: !previousmodal
+            modal: !previous.modal
         }));
     };
 
