@@ -20,6 +20,10 @@ class Home extends Component {
         axios.get(API_URL).then(res => this.setState({ rooms: res.data }));
     };
 
+    resetState = () => {
+        this.getRooms();
+    };
+
     render() {
         return (
             <Container style={{ marginTop: "20px" }}>
