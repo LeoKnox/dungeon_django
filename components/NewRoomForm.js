@@ -18,7 +18,7 @@ class NewRoomForm extends React.Component {
     componentDidMount() {
         if (this.props.room) {
             const { pk, name, description, floor, width, length } = this.props.room;
-            this.setState({ pk, description, floor, width, length });
+            this.setState({ pk, name, description, floor, width, length });
         }
     }
 
