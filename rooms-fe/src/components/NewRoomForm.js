@@ -12,23 +12,24 @@ class NewRoomForm extends React.Component {
         description: "",
         floor: "",
         width: 0,
-        length: 0
+        length: 0,
+        doors: [],
     };
 
     componentDidMount() {
         if (this.props.room) {
-            const { pk, name, description, floor, width, length } = this.props.room;
-            this.setState({ pk, description, floor, width, length });
+            const { pk, name, description, floor, width, length, doors } = this.props.room;
+            this.setState({ pk, name, description, floor, width, length, doors });
         }
     }
 
     onChange = e => {
-        this.setState({ [e.target.name]: e.tart.value });
+        this.setState({ [e.target.name]: e.target.value });
     };
 
     createRoom = e => {
         e.preventDefault();
-        axios.post(API_URL, this.state).thend(() => {
+        axios.post(API_URL, this.state).then(() => {
             this.props.resetState();
             this.props.toggle();
         });
@@ -94,6 +95,7 @@ class NewRoomForm extends React.Component {
                         value={this.defaultIfEmpty(this.state.length)}
                     />
                 </FormGroup>
+                
                 <Button>Send</Button>
             </Form>
         );
