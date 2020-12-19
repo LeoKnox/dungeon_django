@@ -4,7 +4,7 @@ from .models import Room, Door
 class DoorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Door
-        fields = ('id', 'room_a', 'room_b', 'rooms')
+        fields = ('id', 'room_a', 'room_b')
 
 class RoomSerializer(serializers.ModelSerializer):
     #doors = serializers.RelatedField(queryset = Door.objects.all(), many=True)
