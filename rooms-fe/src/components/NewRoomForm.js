@@ -95,7 +95,15 @@ class NewRoomForm extends React.Component {
                         value={this.defaultIfEmpty(this.state.length)}
                     />
                 </FormGroup>
-                
+                <FormGroup>
+                    <Label for="doors_room_a">Room A:</Label>
+                    <input
+                        type="number"
+                        name="doors.room_a"
+                        onChange={this.onChange}
+                        value={this.defaultIfEmpty(this.state.doors)}
+                    />
+                </FormGroup>
                 <Button>Send</Button>
             </Form>
         );
