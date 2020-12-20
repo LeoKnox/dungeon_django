@@ -35,7 +35,11 @@ class RoomList extends Component {
                                 <td>{room.floor}</td>
                                 <td>{room.width}</td>
                                 <td>{room.length}</td>
-                                <td>{room.doors}</td>
+                                <td>
+                                    {this.props.room.doors.map((door, index) => (
+                                        {door.index}
+                                    ))}
+                                </td>
                                 <td align="center">
                                     <NewRoomModal
                                         create={false}
