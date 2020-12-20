@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Table } from "reactstrap";
-import NewRoomModal from "./NewRoomModa";
+import NewRoomModal from "./NewRoomModal";
 
 import ConfirmRemovalModal from "./ConfirmRemovalModal";
 
@@ -36,11 +36,12 @@ class RoomList extends Component {
                                 <td>{room.width}</td>
                                 <td>{room.length}</td>
                                 <td>{room.doors}</td>
-                                <td align="center"
-                                    create={false}
-                                    room={room}
-                                    resetState={this.props.resetState}
-                                >
+                                <td align="center">
+                                    <NewRoomModal
+                                        create={false}
+                                        room={room}
+                                        resetState={this.props.resetState}
+                                    />
                                 &nbsp;&nbsp;
                                 <ConfirmRemovalModal
                                     pk={room.pk}
