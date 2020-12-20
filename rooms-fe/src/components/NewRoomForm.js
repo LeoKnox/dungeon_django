@@ -99,7 +99,7 @@ class NewRoomForm extends React.Component {
                     <Label for="doors_room_a">Room A:</Label>
                     <input
                         type="number"
-                        name="doors.room_a"
+                        name="doors"
                         onChange={this.onChange}
                         value={this.defaultIfEmpty(this.state.doors)}
                     />
