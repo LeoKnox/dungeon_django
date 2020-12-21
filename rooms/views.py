@@ -14,7 +14,8 @@ def rooms_list(request):
         data = Room.objects.all()
 
         serializer = RoomSerializer(data, context={'request': request}, many = True)
-        serializer.data[2]['doors'] = [1]
+        for x in serializer.data[2]:
+            x = x.append(1)
         print(serializer.data[2]['doors'])
         #quertyset = Door.objects.all()
         #serializerT = RoomSerializer()
