@@ -36,7 +36,7 @@ class RoomList extends Component {
                                 <td>{room.width}</td>
                                 <td>{room.length}</td>
                                 <td>
-                                    {this.props.room.doors || this.props.room.doors.map((door, index) => (
+                                    {this.props.room.doors && this.props.room.doors.map((door, index) => (
                                         <label key={index}>{door.index}</label>
                                     ))}
                                 </td>
