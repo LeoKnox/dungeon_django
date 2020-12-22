@@ -5,15 +5,6 @@ import NewRoomModal from "./NewRoomModal";
 import ConfirmRemovalModal from "./ConfirmRemovalModal";
 
 class RoomList extends Component {
-
-    ddoors = pk => {
-        if (pk) {
-            return pk;
-        } else {
-            return "9";
-        }
-    };
-    
     render() {
         const rooms = this.props.rooms;
         return (
@@ -45,8 +36,8 @@ class RoomList extends Component {
                                 <td>{room.width}</td>
                                 <td>{room.length}</td>
                                 <td>
-                                    {this.props.room.doors.map((door, index) => (
-                                        <label key={index}>{this.ddoors(this.props.pk)}</label>
+                                    {this.props.room.doors || this.props.room.doors.map((door, index) => (
+                                        <label key={index}>{door.index}</label>
                                     ))}
                                 </td>
                                 <td align="center">
