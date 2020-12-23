@@ -21,6 +21,8 @@ class SingleRoomModal extends Component {
             <Fragment>
                 <p>Blue</p>
             </Fragment>
-        )
+        );
     }
 }
+
+export default SingleRoomModal;
