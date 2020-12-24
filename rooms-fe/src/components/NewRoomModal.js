@@ -9,7 +9,7 @@ class NewRoomModal extends Component {
 
     toggle = () => {
         this.setState(previous => ({
-            modal: !previousmodal
+            modal: !previous.modal
         }));
     };
 
@@ -23,7 +23,7 @@ class NewRoomModal extends Component {
 
             button = (
                 <Button
-                    color="primery"
+                    color="primary"
                     className="float-right"
                     onClick={this.toggle}
                     style={{ minWidth: "200px" }}
