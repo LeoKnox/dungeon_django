@@ -17,16 +17,20 @@ class SingleRoomModal extends Component {
 
         var title = "Your Room";
 
+        var button = (
+            <Button
+                color="info"
+                className="float-right"
+                onClick={this.toggle}
+                style={{ minWidth: "100px" }}
+            >
+                Room
+            </Button>
+        )
+
         return (
             <Fragment>
-                <Button
-                    color="primary"
-                    className="float-right"
-                    onClick={this.toggle}
-                    style={{ minWidth: "100px" }}
-                >
-                    Room
-                </Button>
+                {button}
             </Fragment>
         );
     }
