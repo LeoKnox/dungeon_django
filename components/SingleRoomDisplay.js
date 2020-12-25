@@ -1,0 +1,3 @@
+return (
+    <Label>Red</Label>
+)
