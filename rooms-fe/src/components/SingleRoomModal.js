@@ -31,6 +31,18 @@ class SingleRoomModal extends Component {
         return (
             <Fragment>
                 {button}
+
+                <Modal isOpen={this.state.modal} toggle={this.toggle}>
+                    <ModalHeader toggle={this.toggle}>{title}</ModalHeader>
+
+                    <ModalBody>
+                        <SingleRoomDisplay
+                            resetState={this.props.resetState}
+                            toggle={this.toggle}
+                            room={this.props.room}
+                        />
+                    </ModalBody>
+                </Modal>
             </Fragment>
         );
     }
