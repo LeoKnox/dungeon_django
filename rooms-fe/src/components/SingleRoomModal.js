@@ -19,7 +19,14 @@ class SingleRoomModal extends Component {
 
         return (
             <Fragment>
-                <p>Blue</p>
+                <Button
+                    color="primary"
+                    className="float-right"
+                    onClick={this.toggle}
+                    style={{ minWidth: "100px" }}
+                >
+                    Room
+                </Button>
             </Fragment>
         );
     }
