@@ -5,7 +5,7 @@ import axios from "axios";
 
 import { API_URL } from "../constants";
 
-Class SingleRoomDisplay extends Component {
+class SingleRoomDisplay extends Component {
     state = {
         model: false
     };
@@ -26,7 +26,7 @@ Class SingleRoomDisplay extends Component {
     render() {
         return (
             <Fragment>
-                <Label>Red</Label>
+                <label>Red</label>
             </Fragment>
         );
     }
