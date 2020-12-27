@@ -26,7 +26,7 @@ class SingleRoomDisplay extends Component {
     render() {
         return (
             <Fragment>
-                <label>Red</label>
+                <label>Red {this.props.name}</label>
             </Fragment>
         );
     }
