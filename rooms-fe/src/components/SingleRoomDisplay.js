@@ -24,9 +24,11 @@ class SingleRoomDisplay extends Component {
     };
     
     render() {
+        const room = this.props.room;
+
         return (
             <Fragment>
-                <label>Red {this.props.name}</label>
+                <label>Red {room}</label>
             </Fragment>
         );
     }

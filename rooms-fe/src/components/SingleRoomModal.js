@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
+import SingleRoomDisplay from "./SingleRoomDisplay"
 
 class SingleRoomModal extends Component {
     state = {
