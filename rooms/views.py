@@ -49,3 +49,10 @@ def rooms_detail(request, pk):
     elif request.method == 'DELETE':
         room.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+@api_view(['GET'])
+def single_room(request, pk):
+    try:
+        room = Room.objects.get(pk=pk)
+    except RoomDoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
