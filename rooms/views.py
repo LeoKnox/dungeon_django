@@ -32,12 +32,16 @@ def rooms_list(request):
             return Response(status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(['PUT', 'DELETE'])
+@api_view(['GET', 'PUT', 'DELETE'])
 def rooms_detail(request, pk):
     try:
         room = Room.objects.get(pk=pk)
+        print(room.name)
     except Room.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        return Response(room)
     
     if request.method == 'PUT':
         serializer = RoomSerializer(room, data=request.data,context={'request':request})
