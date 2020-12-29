@@ -42,6 +42,7 @@ def rooms_detail(request, pk):
 
     if request.method == 'GET':
         serializer = RoomSerializer(room)
+        print(serializer.data['name'])
         return Response(serializer.data)
     
     if request.method == 'PUT':
