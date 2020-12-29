@@ -41,7 +41,8 @@ def rooms_detail(request, pk):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        return Response(room)
+        serializer = RoomSerializer(room)
+        return Response(serializer.data)
     
     if request.method == 'PUT':
         serializer = RoomSerializer(room, data=request.data,context={'request':request})
