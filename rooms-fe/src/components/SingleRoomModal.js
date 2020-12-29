@@ -25,7 +25,7 @@ class SingleRoomModal extends Component {
                 onClick={this.toggle}
                 style={{ minWidth: "100px" }}
             >
-                Room
+                Room SRM {create}
             </Button>
         )
 

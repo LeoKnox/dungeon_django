@@ -28,7 +28,7 @@ class SingleRoomDisplay extends Component {
 
         return (
             <Fragment>
-                <label>Red {room}</label>
+                <label>Red {room} SRD</label>
             </Fragment>
         );
     }
