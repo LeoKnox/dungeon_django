@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 import SingleRoomDisplay from "./SingleRoomDisplay"
+import Axios from "axios";
 
 class SingleRoomModal extends Component {
     state = {
@@ -10,11 +11,11 @@ class SingleRoomModal extends Component {
     toggle = () => {
         this.setState(previous => ({
             modal: !previous.modal
-        }));
+        }))
     };
 
     render() {
-        const create = this.props.create;
+        const room = this.props.room;
 
         var title = "Your Room";
 
@@ -25,7 +26,7 @@ class SingleRoomModal extends Component {
                 onClick={this.toggle}
                 style={{ minWidth: "100px" }}
             >
-                Room SRM {create}
+                Room SRM {room}
             </Button>
         )
 
@@ -40,7 +41,7 @@ class SingleRoomModal extends Component {
                         <SingleRoomDisplay
                             resetState={this.props.resetState}
                             toggle={this.toggle}
-                            room={this.props.room}
+                            room={room}
                         />
                     </ModalBody>
                 </Modal>
