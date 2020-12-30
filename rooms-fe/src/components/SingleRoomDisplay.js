@@ -17,14 +17,14 @@ class SingleRoomDisplay extends Component {
     };
 
     singleRoom = pk => {
-        axios.get(API_URL + pk).then(res => this.setState({ rooms: res.data }));
+        axios.get(API_URL + pk).then();
     };
     
     render() {
 
         return (
             <Fragment>
-                <label>Red {this.singleRoom()} SRD</label>
+                <label>Red {pk} SRD</label>
             </Fragment>
         );
     }
