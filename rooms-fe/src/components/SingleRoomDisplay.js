@@ -9,8 +9,12 @@ import RoomList from "./RoomList";
 class SingleRoomDisplay extends Component {
     state = {
         model: false,
-        room: []
+        room: {}
     };
+
+    componentDidMount() {
+        this.resetState();
+    }
 
     toggle = () => {
         this.ListeningStateChangedEvent(previous => ({
@@ -19,14 +23,14 @@ class SingleRoomDisplay extends Component {
     };
 
     singleRoom = pk => {
-        axios.get(API_URL + pk).then(this.setState({room: data}));
+        axios.get(API_URL + pk).then(res => this.setState({room: res.data}));
     };
     
     render() {
 
         return (
             <Fragment>
-                <label>Red {room.name} SRD</label>
+                <label>Red {this.state.room.name} SRD</label>
             </Fragment>
         );
     }
