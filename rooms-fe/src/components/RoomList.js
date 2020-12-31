@@ -38,7 +38,7 @@ class RoomList extends Component {
                                 <td>{room.length}</td>
                                 <td>
                                     <SingleRoomModal
-                                        pk={room.pk}
+                                        room={room}
                                         resetState={this.props.resetState}
                                     />
                                 </td>
