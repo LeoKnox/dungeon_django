@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 import SingleRoomDisplay from "./SingleRoomDisplay"
-import Axios from "axios";
+//import axios from "axios";
 
 class SingleRoomModal extends Component {
     state = {
