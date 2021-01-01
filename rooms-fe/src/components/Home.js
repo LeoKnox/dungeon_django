@@ -9,15 +9,24 @@ import { API_URL } from "../constants";
 
 class Home extends Component {
     state = {
-        rooms: []
+        rooms: [{
+            name: "",
+            description: "",
+            floor: "",
+            length: 0,
+            width: 0,
+            doors: []
+        }]
     };
 
     componentDidMount() {
         this.resetState();
-    }
+    };
 
     getRooms = () => {
-        axios.get(API_URL).then(res => this.setState({ rooms: res.data }));
+        axios.get(API_URL).then(res => 
+            this.setState({ rooms: res.data })
+        );
     };
 
     resetState = () => {

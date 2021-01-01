@@ -23,7 +23,9 @@ class SingleRoomDisplay extends Component {
     };
 
     singleRoom = pk => {
-        axios.get(API_URL + pk).then(res => this.setState({room: res.data}));
+        axios.get(API_URL + pk).then(res => { this.room = res.data; });
+        console.log(this.room + "hhhhhh");
+        //axios.get(API_URL + pk).then(res => this.setState({room: res.data}));
     };
     
     render() {
