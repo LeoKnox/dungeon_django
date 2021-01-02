@@ -9,14 +9,7 @@ import { API_URL } from "../constants";
 
 class Home extends Component {
     state = {
-        rooms: [{
-            name: "",
-            description: "",
-            floor: "",
-            length: 0,
-            width: 0,
-            doors: []
-        }]
+        rooms: []
     };
 
     componentDidMount() {
